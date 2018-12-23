@@ -1,0 +1,46 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>とりあえずLIFFを試してみる</title>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="row button-group">
+      <div class="col-6 button-row">
+        <button type="button" class="btn btn-info btn-sm" id="openwindowbutton">ブラウザを開く</button>
+      </div>
+      <div class="col-6">
+        <button type="button" class="btn btn-info btn-sm" id="closewindowbutton">LIFFを閉じる</button>
+      </div>
+    </div>
+
+    <div class="row profile-group">
+      <div class="col-4">
+
+        <div id="profilepicturediv">
+        </div>
+
+      </div>
+
+      <div class="col-8">
+        <h2 id="displaynamefield"></h2>
+      </div>
+      
+    </div>
+
+    <div class="sendmessage-group">
+      <button type="button" class="btn btn-success btn-sm btn-block" id="sendmessagebutton">BOTにメッセージを送る</button>
+    </div>
+
+  </div>
+
+  <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+  <script src="index.js"></script>
+</body>
