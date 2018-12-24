@@ -1,4 +1,15 @@
+/*
+ * liffのドキュメントについては以下を参照
+ * https://developers.line.biz/ja/reference/liff/
+*/
+
 window.onload = function (e) {
+
+  /*
+   * liff.init(successCallback, errorCallback)
+   * LIFFアプリの初期化を行います。
+   * dataにはuserIdなどの情報が入っています。
+  */
   liff.init(function (data) {
     initializeApp(data);
   });
@@ -6,7 +17,11 @@ window.onload = function (e) {
 };
 
 function initializeApp(data){
-  // プロフィールを取得して、表示名（displayName)とトプ画を表示させる
+
+  /*
+   * liff.getProfile()
+   * プロフィールを取得して、表示名（displayName)とトプ画を表示させる
+   */
   liff.getProfile().then(function (profile) {
     document.getElementById('displaynamefield').textContent = profile.displayName;
 
@@ -26,19 +41,28 @@ function initializeApp(data){
   });
 
 
-  // ブラウザを開く
+  /* 
+   * liff.openWindow({url: "http://..."})
+   * ブラウザを開く
+   */
   document.getElementById('openwindowbutton').addEventListener('click', function () {
     liff.openWindow({
       url: 'https://line.me'
     });
   });
 
-  // LIFFを閉じる
+  /* 
+   * liff.closeWindow()
+   * LIFFを閉じる
+   */
   document.getElementById('closewindowbutton').addEventListener('click', function () {
     liff.closeWindow();
   });
 
-  // Botにメッセージを送信する
+  /* 
+   * liff.sendMessages()
+   * Botにメッセージを送信する
+   */
   document.getElementById('sendmessagebutton').addEventListener('click', function () {
     liff.sendMessages([
       {
